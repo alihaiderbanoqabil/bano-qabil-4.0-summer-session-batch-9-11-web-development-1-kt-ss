@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom File Upload</title>
+    <style>
+        /* Hide the default file input */
+        #fileInput {
+            display: none;
+        }
+
+        /* Style your custom button */
+        .custom-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Show selected file name */
+        #fileName {
+            margin-left: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hidden file input -->
+    <input type="file" id="fileInput" />
+
+    <!-- Custom upload button -->
+    <button class="custom-upload" onclick="triggerFileUpload()">Upload File</button>
+    <span id="fileName">No file selected</span>
+
+    <script>
+        // Function to trigger the hidden file input
+        function triggerFileUpload() {
+            document.getElementById('fileInput').click();
+        }
+
+        // Display the selected file name
+        document.getElementById('fileInput').addEventListener('change', function () {
+            const fileName = this.files[0] ? this.files[0].name : 'No file selected';
+            document.getElementById('fileName').textContent = fileName;
+        });
+    </script>
+
+</body>
+
+</html>
