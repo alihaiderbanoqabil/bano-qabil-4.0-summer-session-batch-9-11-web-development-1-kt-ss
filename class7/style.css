@@ -1,0 +1,19 @@
+/* body {
+  background-color: yellow;
+  color: red;
+} */
+/* h1 {
+  color: lightskyblue;
+  background-color: rgb(155, 9, 24) !important;
+  background-color: rgb(155, 9, 24);
+} */
+body {
+  margin: 0;
+}
+h1 {
+  background-color: bisque;
+  color: rgb(0, 238, 255);
+  border: 5px solid rgb(227, 234, 20);
+  margin: 50px;
+  padding: 50px;
+}
