@@ -103,7 +103,7 @@ var fullname = "ali haider",
 var n1 = "10";
 var n2 = 20;
 var sum = Number(n1) + n2;
-console.log("sum:", sum);
+console.log("sum:", 10+20);
 
 var num1 = "20.5";
 var number1 = Number(num1);
