@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 5 of JS</title>
+  </head>
+  <body>
+    <h1>Class 5 of JS</h1>
+    <script>
+    //   console.log("Welcome to Class 5 of JS");
+      let name1 = "Ali";
+      // let name2 = name1;
+      // console.log(name1, "name1");
+      // console.log(name2, "name2");
+      // // name1 = "Haider";
+      // name2 = "Usman";
+      // console.log(name2, "name2");
+      // console.log(name1, "name1");
+
+      let studentInfo1 = {
+        name: "Ali",
+        age: 20,
+        marks: 85,
+        hobbies: ["Reading", "Traveling", "Gaming"],
+        address: {
+          city: "Karachi",
+          country: "Pakistan",
+          postalCode: 12345,
+        },
+      };
+    //   let jsonStundentInfo = JSON.stringify(studentInfo1);
+      //   console.log(typeof studentInfo1, "studentInfo1");
+
+      //   console.log(typeof jsonStundentInfo, "jsonStundentInfo");
+      //   JSON = JavaScript Object Notation
+      //   let studentInfo2 = structuredClone(studentInfo1);
+
+        let studentInfo2 = JSON.parse(JSON.stringify(studentInfo1));
+
+    //   let studentInfo2 = studentInfo1;
+      // console.log(studentInfo1, "studentInfo1");
+      // console.log(studentInfo2, "studentInfo2");
+      studentInfo1.age = 30;
+      studentInfo2.name = "Usman";
+      studentInfo2.address.city = "Multan";
+    //   console.log(studentInfo1, "studentInfo1");
+    //   console.log(studentInfo2, "studentInfo2");
+
+      //   window.localStorage.setItem("studentInfo1", studentInfo1);
+      localStorage.setItem("name", name1);
+    //   localStorage.setItem("jsonStundentInfo", jsonStundentInfo);
+      let hobbies = ["Reading", "Traveling", "Gaming"];
+
+      const studentsInformation = [
+        {
+          id: 1001,
+          name: "Ali",
+          age: 20,
+          gender: "Male",
+          dob: "2003-05-15",
+          address: "123 Main St, City",
+          isAdult: true,
+          addressDetails: {
+            street: "123 Main St",
+            city: "City",
+            country: "Country",
+          },
+          hobbies: ["reading", "traveling", "coding"],
+        },
+        {
+          id: 1002,
+          name: "Haider",
+          age: 21,
+          gender: "Male",
+          dob: "2003-05-15",
+          address: "123 Main St, City",
+          isAdult: true,
+          addressDetails: {
+            street: "123 Main St",
+            city: "City",
+            country: "Country",
+          },
+          hobbies: ["reading", "traveling", "swimming"],
+        },
+      ];
+      localStorage.setItem("studentsInformation", studentsInformation);
+      localStorage.setItem(
+        "studentsInformation",
+        JSON.stringify(studentsInformation)
+      );
+      localStorage.setItem("hobbies", hobbies);
+      localStorage.setItem("age", 26);
+      localStorage.setItem("isMale", true);
+
+      //   let myHobbies = hobbies;
+      //   //   hobbies.push("Swimming", "Coding");
+      //   myHobbies.push("Swimming");
+      //   console.log(hobbies, "hobbies");
+      //   console.log(hobbies.join("&"), "hobbies");
+      //   console.log(myHobbies, "myHobbies");
+
+      // console.log(name);
+      // name = "Doe";
+      // console.log(name);
+
+      //   console.log(localStorage.getItem("name"));
+      //   console.log(localStorage.getItem("nkjszhkjfsdhfkjdhf"));
+      let localStorageStudentsInformation = localStorage.getItem(
+        "studentsInformation"
+      );
+      //   console.log(
+      //     localStorageStudentsInformation,
+      //     "localStorageStudentsInformation"
+      //   );
+
+      const localStorageHobbies = localStorage.getItem("hobbies");
+    //   console.log(localStorageHobbies.split(","), "localStorageHobbies");
+
+      const localStorageStudentsInformationParsed = localStorage.getItem(
+        "studentsInformation"
+      );
+      const parsed = JSON.parse(localStorageStudentsInformation);
+    //   console.log(
+    //     // localStorageStudentsInformationParsed,
+    //     // localStorageStudentsInformationParsed.split(","),
+    //     // localStorageStudentsInformationParsed.at(1),
+    //     "localStorageStudentsInformationParsed",
+    //     parsed.at(1)
+    //   );
+
+      //   const parsedLocalStorageHobbies = JSON.parse(localStorage.getItem("hobbies"));
+      //   console.log(localStorageHobbies, "localStorageHobbies", typeof localStorageHobbies);
+      //   console.log(
+      //     parsedLocalStorageHobbies,
+      //     "parsedLocalStorageHobbies",
+      //     typeof parsedLocalStorageHobbies
+      //   );
+      //   console.log(localStorage.getItem("isMale"));
+      let age = localStorage.getItem("age");
+      //   console.log(age, typeof age, Number(age));
+      console.log(localStorage.getItem("age"));
+      console.log(localStorage.length);
+    //   console.log(localStorage.key(2));
+    //   localStorage.removeItem("age");
+    //   localStorage.removeItem("name");
+    //   localStorage.clear();
+
+      console.log(localStorage.getItem("age"));
+      
+    </script>
+  </body>
+</html>
