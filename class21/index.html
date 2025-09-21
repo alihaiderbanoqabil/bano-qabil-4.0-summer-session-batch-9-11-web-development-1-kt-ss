@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 6 of JS</title>
+  </head>
+  <body>
+    <h1>Class 6 of JS</h1>
+    <script>
+      console.log("Welcome to Class 6 of JS");
+      // operators in JS
+
+      //   console.log(5 + 3); // addition
+      //   console.log(5 - 3); // subtraction
+      //   console.log(5 * 3); // multiplication
+      //   console.log(5 / 3); // division
+      //   console.log(5 % 3); // modulus
+      //   console.log(5 ** 3); // exponentiation
+      //   console.log(Math.pow(5, 3), "pow"); // power
+
+      const randomNumber = Math.random() * 100;
+      //   console.log(randomNumber, "random");
+      //   console.log(randomNumber.toString(), "random to string");
+      //   console.log(randomNumber.toFixed(3), "random to string");
+      //   console.log(Math.floor(randomNumber), " floor");
+      //   console.log(Math.ceil(randomNumber), "ceil");
+      //   console.log(Math.round(randomNumber), "round");
+      //   const array = [5, 3, 8, 4, 10, 15, 20];
+      //   console.log(Math.min(...array), "min with array"); // minimum
+      //   console.log(Math.min(5, 3, 8, 1, 4), "min"); // minimum
+      //   console.log(Math.max(5, 3, 8, 1, 4), "max"); // maximum
+      //   console.log(Math.sqrt(16), "sqrt"); // square root
+      //   console.log(Math.abs(-5), "abs"); // absolute value
+      let number = 100;
+      number = number + 1; // 101
+      number += 1; // 101
+      //   console.log(number, "number");
+      //   console.log(++number, "post increment"); // post increment
+      //   console.log(++number, "post increment"); // post increment
+      //   console.log(--number, "post decrement"); // post decrement
+      //   console.log(--number, "post decrement"); // post decrement
+      //   console.log(--number, "post decrement"); // post decrement
+      //   let a = 10;
+      //   let b = 2;
+      //   a = a + b;
+      //   OR
+      //   a += b;
+      // a =  * b;
+      //   OR
+      //   a *= b;
+
+      //   a = a ** b;
+      //   OR
+      //   a **= b;
+      //   console.log(a, "a");
+      //   console.log(b, "b");
+
+      //   let c = 20;
+      //   let d = "10";
+      //   console.log(c == d, "double equal"); // only check value
+      //   console.log(c === d, "triple equal"); // check value and type
+      //   console.log(c != d, "not equal"); // not equal
+      //   console.log(c !== d, "not equal value or type"); // not equal value or type
+      //   console.log(c > d, "greater than"); // greater than
+      //   console.log(c < d, "less than"); // less than
+      //   console.log(c >= d, "greater than or equal to"); // greater than or equal to
+      //   console.log(c <= d, "less than or equal to"); // less than or equal to
+      //     let a = 300;
+      //     let b = 200;
+      //     let c = 20;
+      //     let d = 100;
+      //   let color = "green";
+      //   if (c < d) {
+      //     console.log("condition is true");
+      //   }
+
+      //   if (c < d && color === "gree" && a > b) {
+      //     console.log("condition is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+
+      //   if (c < d && color === "green" && a > b) {
+      //     console.log("condition is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+
+      //   if (c > d || color === "green" || a > b) {
+      //     console.log("condition is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+
+      //   if (c > d || color === "gree" || a > b) {
+      //     console.log("condition is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+      //   if ((c > d || a < b) && color === "gree") {
+      //     console.log("condition is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+
+      //   ladder if else if else statement
+      //   let a = 300;
+      //   let b = 200;
+      //   let c = 20;
+      //   let d = 100;
+      //   let color = "green";
+      //   if (color == "green") {
+      //     console.log("color is green");
+      //   } else if (color == "red") {
+      //     console.log("color is red");
+      //   } else if (color == "blue") {
+      //     console.log("color is blue");
+      //   } else {
+      //     console.log("color is not green, red or blue");
+      //   }
+      //   if (c < d) {
+      //     console.log("condition is true");
+      //   } else if (color === "green") {
+      //     console.log("condition 2 is true");
+      //   } else if (a > b) {
+      //     console.log("condition 3 is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+
+      //   let a = 300;
+      //   let b = 200;
+      //   let c = 20;
+      //   let d = 100;
+      //   let color = "green";
+      //   if (c < d) {
+      //     console.log("condition 1 is true");
+      //   }
+      //   if (color === "green") {
+      //     console.log("condition 2 is true");
+      //   }
+      //   if (a > b) {
+      //     console.log("condition 3 is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+      // nested if else statement
+      //   let a = 300;
+      //   let b = 200;
+      //   let c = 20;
+      //   let d = 100;
+      //   let color = "green";
+      //   if (a > b) {
+      //     if (c < d) {
+      //       console.log("condition 1 is true");
+      //     } else {
+      //       console.log("condition 2 is true");
+      //     }
+      //     console.log("condition is true");
+      //   } else {
+      //     console.log("condition is false");
+      //   }
+      //   switch case statement
+      //   let color = "gree";
+      //   if (color == "green") {
+      //     console.log("color is green");
+      //   } else if (color == "red") {
+      //     console.log("color is red");
+      //   } else if (color == "blue") {
+      //     console.log("color is blue");
+      //   } else {
+      //     console.log("color is not green, red or blue");
+      //   }
+      // switch (key) {
+      //     case value:
+      //         break;
+      //     default:
+      //         break;
+      // }
+      //   switch (color) {
+      //     case "green":
+      //       console.log("color is green");
+      //       break;
+      //     case "red":
+      //       console.log("color is red");
+      //       break;
+      //     case "blue":
+      //       console.log("color is blue");
+      //       break;
+      //     default:
+      //       console.log("color is not green, red or blue");
+      //   }
+
+      // loops in js
+      // for (let index = 0; index < 10; index++) {
+      //   console.log("Hello World", index);
+      // }
+      // for (let index = 1; index <= 10; index++) {
+      //   console.log("Hello World", index);
+      // }
+      const array = [5, 3, 8, 4, 10, 15, 20];
+      console.log("array", array);
+
+      // for (let index = 0; index < array.length; index++) {
+      //   const element = array[index];
+      //   console.log(index, "array element", element);
+      // }
+      // for (let index = array.length - 1; index >= 0; index--) {
+      //   const element = array[index];
+      //   console.log(index, "array element", element);
+      // }
+      // for (let i = 0; i < array.length; i++) {
+      //   const element = array[i];
+      //   console.log(i, "array element outer loop", element);
+      //   for (let j = 0; j < array.length; j++) {
+      //     const element = array[j];
+      //     console.log(j, "array element inner loop", element);
+      //   }
+      // }
+      // let index = 0;
+      // while (index < array.length) {
+      //   const element = array[index];
+      //   console.log(index, "array element", element);
+      //   index++;
+      // }
+    </script>
+    <script src="./guess.js"></script>
+  </body>
+</html>
