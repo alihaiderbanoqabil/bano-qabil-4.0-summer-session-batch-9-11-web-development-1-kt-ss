@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 7 of JS</title>
+  </head>
+  <body>
+    <h1>Class 7 of JS</h1>
+    <script>
+      "use strict";
+      const obj = {
+        name: "Bano Qabil",
+        age: 21,
+        greet1: function () {
+          console.log(this, "object greet1 this");
+          console.log(`Hello, ${this.name}`);
+          //   console.log("Hello, " + this.name);
+          return "greet1 called";
+        },
+        greet2: () => {
+          console.log(this, "object greet2 this");
+          console.log(`Hello, ${this.name}`);
+        },
+        // greet() {
+        //   console.log(this, "object this");
+        //   console.log(`Hello, ${this.name}`);
+        // },
+      };
+
+      //   console.log(obj, "obj");
+      //   console.log(obj.name, "obj");
+      //   console.log(obj.greet1(), "obj");
+      //   console.log(obj.greet2(), "obj");
+
+      //   alert("Welcome to JS class");
+      // const name = prompt("Hello, what's your name?");
+      // console.log(name, "name", typeof name);
+      // const areYouSure = confirm("Are you enjoying the class?");
+      // console.log(areYouSure, "areYouSure", typeof areYouSure);
+
+      //   let index = 0;
+      //   while (index > 5) {
+      //     console.log(index, "index");
+      //     index++;
+      //   }
+
+      //   let index = 0;
+      //   while (index < 5) {
+      //     console.log(index, "index");
+      //     index++;
+      //   }
+      //   let index = 0;
+      //   do {
+      //     console.log(index, "index");
+      //     index++;
+      //   } while (index < 5);
+      //   let index = 0;
+      //   do {
+      //     console.log(index, "index");
+      //     index++;
+      //   } while (index > 5);
+
+      // functions in javascript
+      //   regular functions in js
+      //   function greet() {
+      //     console.log("Hello, Bano Qabil");
+      //     console.log("Hello, Bano Qabil");
+      //   }
+      //   greet();
+      //   parameters and arguments in functions
+      // function add(num1, num2) {
+      //   const sum = num1 + num2;
+      //   console.log(sum, "sum", num1, num2);
+      //   // return  num1 + num2;
+      // }
+      //   add();
+      //   add(40);
+      //   add(10, 30);
+      //   add(30, 40);
+      //   function add(num1 = 100, num2 = 200) {
+      //     const sum = num1 + num2;
+      //     //   console.log(sum, "sum", num1, num2);
+      //     return num1 + num2;
+      //   }
+      //   window.alert(add());
+      //   console.log(add(40));
+      //   document.write(add(10, 30));
+
+      // function multiply(n1, n2) {
+      //   return n1 * n2;
+      // }
+      // console.log(multiply(5, 6), "multiply");
+      //   function add(num1 = 100, num2 = 200) {
+      //     const sum = num1 + num2;
+      //     console.log(sum, "sum", num1, num2);
+      //     // return  num1 + num2;
+      //   }
+      //   function add(num1 = 100, num2 = 200) {
+      //     console.log(this, "function this");
+
+      //     return num1 + num2;
+      //   }
+      //   console.log(this, "global this");
+
+      //   add(10, 20);
+      // arrow functions in js
+      //   const add = (num1 = 100, num2 = 200) => {
+      //     const sum = num1 + num2;
+      //     // console.log(sum, "sum", num1, num2);
+      //     return sum;
+      //   };
+      //   console.log(add());
+      //   const add = (num1 = 100, num2 = 200) => num1 + num2;
+      //   console.log(add(40));
+      //   add(10, 30);
+      //   add(30, 40);
+
+      //   function sum1() {
+      //     let sum = 0;
+      //     for (let i = 0; i < arguments.length; i++) {
+      //       //   sum += arguments[i];
+
+      //       sum = sum + arguments[i];
+      //     //   console.log(arguments[i], i, "arguments[i]", sum);
+      //     }
+      //     // console.log(arguments, "arguments sum1");
+      //     return sum;
+      //   }
+      //   console.log(sum1(10, 20, 30, 40, 50, 100, 200));
+
+      //   const sum2 = () => {
+      //     console.log(arguments, "arguments sum2");
+
+      //     // return n1 + n2;
+      //   };
+      //   sum2(10, 20, 30, 40, 50);
+      //   const sum1 = function (num1 = 100, num2 = 200) {
+      //     return n1 + n2;
+      //   };
+      //   const sum2 = (num1 = 100, num2 = 200) => {
+      //     return num1 + num2;
+      //   };
+    </script>
+    <!-- <script src="./intervals.js"></script> -->
+    <script src="./strings.js"></script>
+  </body>
+</html>
