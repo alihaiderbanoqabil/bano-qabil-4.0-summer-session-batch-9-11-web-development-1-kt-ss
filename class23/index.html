@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 8 of JS</title>
+  </head>
+  <body>
+    <h1>Class 8 of JS</h1>
+    <script>
+      // array methods in js
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      // console.log(fruits, "fruits");
+      //   console.log(fruits.at());
+      //   console.log(fruits.at(2));
+      //   console.log(fruits.at(-1));
+      //   console.log(fruits.concat(["Carrot", "Peas"], ["Pineapple", "Grapes"]));
+      //   console.log(fruits.entries());
+      //   for (let i = 0; i < fruits.length; i++) {
+      //     const fruit = fruits[i];
+      //     console.log(fruit, "fruit for loop", i);
+      //   }
+      //   for (const element of fruits) {
+      //     console.log(element, "fruit for of loop");
+      //   }
+      //   for (const fruit of fruits.entries()) {
+      //     const index = fruit[0];
+      //     const value = fruit[1];
+      //     console.log(fruit, "fruit", index, value);
+      //   }
+
+      //   for (const key in fruits) {
+      //     const element = fruits[key];
+      //     console.log(element, "element", key);
+      //   }
+
+      //   for (const key in fruits) {
+      //     const element = fruits[key];
+      //     console.log(element, "element", key);
+      //   }
+      //   const obj = {
+      //     name: "Bano Qabil",
+      //     age: 21,
+      //     city: "Karachi",
+      //     "my country": "Pakistan",
+      //   };
+      //   console.log(obj, "obj");
+      //   for (const mykey in obj) {
+      //     console.log(
+      //       mykey,
+      //       "key",
+      //       obj[mykey],
+      //       obj.mykey,
+      //       obj.city,
+      //       obj["my country"],
+      //       obj["age"]
+      //     );
+      //   }
+
+      const numbers = [4, 9, 16, 25];
+      //   const multipleOf2 = numbers.map((item, index, array) => {
+      //     console.log(item, index, array, "item");
+      //     // return item * 2;
+      //     // return 'ali';
+      //   });
+      //   console.log(numbers.map((item) => item * 2), "numbers x 2");
+      //   console.log(numbers, "numbers");
+      //   console.log(multipleOf2, "multipleOf2");
+
+      //   numbers.map(function (item, index, array) {
+      //     console.log(item, index, array, "item function");
+      //   });
+      //   const callback = function (item, index, array) {
+      //     console.log(item, index, array, "item function");
+      //   };
+      //   numbers.map(callback);
+
+      //   const square = numbers.map((num, index) => {
+      //     //   console.log(num, "num", index);
+      //     return num * num;
+      //   });
+
+      //   console.log(square, "square");
+
+      //   function hof(params) {
+      //     return function () {
+      //       console.log("HOF called", params);
+      //     };
+      //   }
+      //   hof(function () {}); // here we passing a function as an argument and the function we passing in function is called callback function
+
+      const products = [
+        {
+          id: 1,
+          name: "Wireless Headphones",
+          price: 99.99,
+          category: "Electronics",
+          inStock: true,
+        },
+        {
+          id: 2,
+          name: "Running Shoes",
+          price: 79.99,
+          category: "Footwear",
+          inStock: true,
+        },
+        {
+          id: 3,
+          name: "Smart Watch",
+          price: 149.99,
+          category: "Wearables",
+          inStock: false,
+        },
+        {
+          id: 4,
+          name: "Coffee Maker",
+          price: 59.99,
+          category: "Home Appliances",
+          inStock: true,
+        },
+        {
+          id: 5,
+          name: "Yoga Mat",
+          price: 19.99,
+          category: "Fitness",
+          inStock: true,
+        },
+        {
+          id: 6,
+          name: "Bluetooth Speaker",
+          price: 45.0,
+          category: "Electronics",
+          inStock: true,
+        },
+        {
+          id: 7,
+          name: "Trail Running Shoes",
+          price: 89.99,
+          category: "Footwear",
+          inStock: false,
+        },
+        {
+          id: 8,
+          name: "Fitness Tracker Band",
+          price: 69.99,
+          category: "Wearables",
+          inStock: true,
+        },
+        {
+          id: 9,
+          name: "Air Fryer",
+          price: 129.0,
+          category: "Home Appliances",
+          inStock: true,
+        },
+        {
+          id: 10,
+          name: "aumbbell Set",
+          price: 39.99,
+          category: "Fitness",
+          inStock: false,
+        },
+      ];
+
+      //   const filteredProducts = products.filter((item, index, array) => {
+      //     console.log(item, index, array, "item");
+      //     // if (item.price > 60) {
+      //     // if (item.category === "Electronics") {
+      //     if (item.category === "Electronics" && item.price > 60) {
+      //     // if (item.category === "Electronics" || item.price > 50) {
+      //       return true;
+      //     } else {
+      //       return false;
+      //     }
+      //   });
+      //   const filteredProducts = products.filter((item, index, array) => {
+      //     console.log(item, index, array, "filter item");
+      //     // return item.price > 60;
+      //     // return item.category === "Electronics" && item.price > 60;
+      //     // return item.category === "Electronics" || item.price > 60;
+      //     // return item.inStock === true;
+      //     // return item.inStock;
+      //     // return item.name.toLowerCase().startsWith("a");
+      //     // return item.name.startsWith("A") || item.name.startsWith("a");
+      //     return item.id === 3;
+      //   });
+      //   console.log(
+      //     filteredProducts,
+      //     "filteredProducts",
+      //     filteredProducts[0],
+      //     filteredProducts[0].name
+      //   );
+
+      //   const findProducts = products.find((item, index, array) => {
+      //     console.log(item, index, array, "find item");
+      //     // return item.price > 60;
+      //     // return item.category === "Electronics" && item.price > 60;
+      //     // return item.category === "Electronics" || item.price > 60;
+      //     // return item.inStock === true;
+      //     // return item.inStock;
+      //     // return item.name.toLowerCase().startsWith("a");
+      //     // return item.name.startsWith("A") || item.name.startsWith("a");
+      //     return item.id === 3;
+      //   });
+      //   console.log(findProducts, "findProducts");
+      //   console.log(products, "products");
+
+      //   const some = products.some((item, index, array) => {
+      //     // console.log(item, index, array, "find item");
+
+      //     return item.price > 20;
+      //   });
+      //   console.log(some, "some");
+
+      //   const every = products.every((item, index, array) => {
+      //     // console.log(item, index, array, "find item");
+
+      //     return item.price > 20;
+      //   });
+      //   console.log(every, "every");
+
+      //   console.log(products.join('$'));
+      //   console.log(numbers.join('$'));
+
+      //   const variable = numbers;
+      //   const variable = products[0];
+      //   console.log(Array.isArray(variable), "isArray");
+      //   const numbersArray = numbers.forEach((item, index, array) => {
+      //     console.log(item, index, array, "forEach item");
+      //   });
+
+      //   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      // Create an Iterable
+      const list = fruits.keys();
+      //   console.log(list, "list");
+      //   for (const element of fruits.entries()) {
+      //     console.log("element", element);
+      //   }
+      //   for (const element of fruits.keys()) {
+      //     console.log("element", element);
+      //   }
+      //   for (const element of fruits.values()) {
+      //     console.log("element", element);
+      //   }
+
+      // console.log(fruits.reverse());
+      // console.log(fruits);
+      //   console.log(numbers.push(20, 40));
+      //   numbers.pop()
+      //   numbers.pop()
+      //   numbers.pop()
+      //   console.log(numbers.unshift(20, 40));
+      //   numbers.shift()
+      //   numbers.shift()
+      //   numbers.shift()
+      //   console.log(numbers);
+
+      //   const sum = numbers.reduce(
+      //     (preiviousValue, currentValue, currentIndex, array) => {
+      //       console.log(preiviousValue, currentValue, currentIndex, array);
+      //       return preiviousValue + currentValue;
+      //     },
+      //     0
+      //   );
+      //   console.log(sum, "sum");
+
+      //   const groupedByCategory = products.reduce((acc, product) => {
+      //     const category = product.category;
+
+      //     if (!acc[category]) {
+      //       acc[category] = [];
+      //     }
+
+      //     acc[category].push(product);
+      //     return acc;
+      //   }, {});
+
+      //   console.log(groupedByCategory, "groupedByCategory");
+      //   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      // At position 2, add "Lemon" and "Kiwi"
+      //   fruits.splice(2, 0, "Lemon"); // add element on specific index
+      //   fruits.splice(2, 1, "Lemon")  // update element on specific index
+      //   fruits.splice(2, 1);  // remove element from specific index
+      //   console.log(fruits);
+      //   console.log(fruits.sort());
+      //   console.log(fruits.sort().reverse());
+      // console.log(fruits);
+      //   console.log(numbers.sort());
+      //   console.log(numbers.sort((a, b) => a - b));
+      //   console.log(numbers.sort((a, b) => b - a));
+
+      //   Object methods in javascript
+
+      const user = { name: "Alice", age: 25 };
+      console.log(Object.keys(user)); // ["name", "age"]
+      console.log(Object.values(user)); // ["Alice", 25]
+      console.log(Object.entries(user)); // [["name", "Alice"], ["age", 25]]
+      const entries = [
+        ["name", "Alice"],
+        ["age", 25],
+      ];
+      console.log(Object.fromEntries(entries)); // { name: "Alice", age: 25 }
+      //   const obj = { a: 1 };
+      //   console.log(obj.hasOwnProperty("a"));
+      //   console.log(obj.hasOwnProperty("b"));
+      //   console.log("a" in obj);
+      //   console.log("b" in obj);
+
+      //   const obj = { name: "John" };
+      //   Object.freeze(obj);
+      //   //   obj.name = "Jane"; // Ignored
+      //   //   obj.age =30; // Ignored
+      //   delete obj.name;
+      //   console.log(obj.name); // "John"
+      //   console.log(obj); // "John"
+
+    //   const obj = { age: 30 };
+    //   Object.seal(obj);
+    //   obj.age = 31; // OK
+    //   delete obj.age; // Fails
+    //   obj.name = "ali"; // Fails
+    //   console.log(obj.age); // 31
+    //   console.log(obj); // 31
+    </script>
+  </body>
+</html>
