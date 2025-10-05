@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch using useInterval</title>
+    <style>
+        body {
+            background: #f3f4f6;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .stopwatch {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .display {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stopwatch">
+        <div class="display" id="display">00:00:00</div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause" disabled>Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        // Custom useInterval (like React hook, but plain JS)
+        function useInterval(callback, delay) {
+            let intervalId = null;
+
+            function start() {
+                if (intervalId === null) {
+                    intervalId = setInterval(callback, delay);
+                }
+            }
+
+            function stop() {
+                if (intervalId !== null) {
+                    clearInterval(intervalId);
+                    intervalId = null;
+                }
+            }
+
+            return { start, stop };
+        }
+
+        // Stopwatch logic
+        const display = document.getElementById("display");
+        const startBtn = document.getElementById("start");
+        const pauseBtn = document.getElementById("pause");
+        const resetBtn = document.getElementById("reset");
+
+        let elapsed = 0; // milliseconds
+
+        const interval = useInterval(() => {
+            elapsed += 10;
+            updateDisplay();
+        }, 10);
+
+        function updateDisplay() {
+            const minutes = Math.floor(elapsed / 60000);
+            const seconds = Math.floor((elapsed % 60000) / 1000);
+            const ms = Math.floor((elapsed % 1000) / 10);
+
+            display.textContent =
+                `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}:${String(ms).padStart(2, "0")}`;
+        }
+
+        startBtn.addEventListener("click", () => {
+            interval.start();
+            startBtn.disabled = true;
+            pauseBtn.disabled = false;
+        });
+
+        pauseBtn.addEventListener("click", () => {
+            interval.stop();
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+        });
+
+        resetBtn.addEventListener("click", () => {
+            interval.stop();
+            elapsed = 0;
+            updateDisplay();
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+        });
+    </script>
+</body>
+
+</html>

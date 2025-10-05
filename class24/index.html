@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 of JS</title>
+</head>
+
+<body>
+    <h1>Class 9 of JS</h1>
+    <!-- <button onclick="resetInterval()">Stop Interval</button>
+    <button onclick="resetTimeout()">Stop Timeout</button> -->
+    <button onclick="deletePost()">Delete Post</button>
+    <button onclick="undoDeletePost()">Undo delete post</button>
+    <script>
+        // Asynchronous Javascript 
+        // intervals
+        // API calling
+        // Promise
+        // Async Await
+        // Fetch API
+        // error handling
+        // console.log("Before setInterval");
+
+        // let index = 0;
+        // const interval = setInterval(() => {
+        //     console.log("hello", index);
+        //     index++;
+        // }, 5000); // 1 second
+
+        // const resetInterval = () => {
+        //     clearInterval(interval);
+        // };
+
+        // console.log("After setInterval");
+
+        // console.log("Before setTimeout");
+
+        // let index = 0;
+        // const timeout = setTimeout(() => {
+        //     console.log("hello", index);
+        //     index++;
+        // }, 5000);
+
+        // const resetTimeout = () => {
+        //     clearTimeout(timeout);
+        // };
+        // console.log("After setTimeout");
+        // let timeoutId = null;
+        // const deletePost = () => {
+
+        //     timeoutId = setTimeout(() => {
+        //         console.log("Post deleted");
+        //     }, 5000);
+        // }
+
+        // const undoDeletePost = () => {
+        //     clearTimeout(timeoutId);
+        // }
+        // setInterval(() => {
+
+        // }, interval);
+        // clearInterval(interval);
+        // setTimeout(() => {
+
+        // }, interval);
+        // clearTimeout(interval);
+        // button.addEventListener("click", () => {
+        //     clearInterval(interval);
+        // });
+        // setInterval(() => { }, 1000 * 60); // 1 minute
+        // setInterval(() => { }, 1000 * 60 * 60); // 1 hour
+        // setInterval(() => { }, 1000 * 60 * 60 * 24); // 1 day
+        // setInterval(() => { }, 1000 * 60 * 60 * 24 * 30); // 1 month
+        // setInterval(() => { }, 1000 * 60 * 60 * 24 * 30 * 12); // 1 year
+
+
+        // API full form is Application Programming Interface
+        // edit profile  reema  farha 
+        // facebook 1000 screens 
+        // 1b active users
+
+        console.log("Before fetch");
+        // pending 
+        // fulfilled 
+        // rejected 
+
+        // fetch("https://jsonplaceholder.typicode.com/todos")
+        fetch("https://fakestoreapi.com/product")
+            .then((response) => {
+                console.log(response, "response");
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data, "data");
+            })
+            .catch((error) => {
+                console.log(error, "error");
+            })
+            .finally(() => {
+                console.log("finally");
+            })
+
+        console.log("After fetch");
+
+    </script>
+
+</body>
+
+</html>
